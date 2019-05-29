@@ -1,13 +1,16 @@
 .todo-form {
   margin: 10px 0;
+  border-top: 1px dashed gray;
+  border-bottom: 1px dashed gray;
+  display: flex;
+  flex-direction: column;
 }
 
 .field {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 24px;
-  border-top: 1px dashed gray;
-  border-bottom: 1px dashed gray;
   width: 100%;
   padding: 10px 0;
 }
@@ -25,4 +28,22 @@
   border: 1px solid gray;
   padding: 0 7px;
   margin: 0 9px;
+}
+
+.clear-complete-btn {
+  width: 90%;
+  height: 32px;
+  margin: 5px;
+  align-self: center;
+  background: crimson;
+  color: white;
+  border: 2px solid red;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 17px;
+  transition: background 0.1s;
+}
+
+.clear-complete-btn:hover {
+  background: red;
 }

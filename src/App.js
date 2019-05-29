@@ -29,10 +29,18 @@ class App extends React.Component {
   }
 
   addTodo = input => {
+    if(input.current.value === "")
+      return;
     console.log(input);
     let todos = Array.from(this.state.todos);
     todos.push({ title: input.current.value, completed: false, id: this.idTracker});
     this.idTracker++;
+    this.setState({todos: todos});
+  }
+
+  removeCompleted = () => {
+    let todos = Array.from(this.state.todos);
+    todos = todos.filter(element => element.completed === false);
     this.setState({todos: todos});
   }
 
@@ -46,7 +54,7 @@ class App extends React.Component {
         <TodoList delete={this.deleteTodo} mark={this.mark} todos={this.state.todos} />
         )
       }
-        <TodoForm addTodo={this.addTodo} />
+        <TodoForm removeCompleted={this.removeCompleted} addTodo={this.addTodo} />
       </div>
     );
   }
