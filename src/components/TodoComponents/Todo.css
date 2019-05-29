@@ -2,10 +2,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: default;
+  user-select: none;
+  background: rgb(72, 193, 209);
+  border-radius: 8px;
+  box-shadow: 0 0 3px 0 lightgray;
+  margin: 2px 0;
 }
 
 .todo-title-incomplete {
-  color: darkblue;
+  color: white;
   flex-grow: 500;
 }
 
@@ -42,10 +48,10 @@
   flex-shrink: 500;
   background: none;
   border: none;
-  color: black;
+  color: white;
   cursor: pointer;
   font-size: 16px;
-  margin-right: 10px;
+  margin: 0 10px;
   transition: color 0.1s;
   transition: font-size 0.1s;
 }

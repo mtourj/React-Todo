@@ -7,7 +7,7 @@ const TodoForm = props => {
   return (
     <div className="todo-form">
       <div className='field'>
-        <p>Create a new todo:</p>
+        <p>CREATE TODO:</p>
         <input ref={input} />
         <button onClick={() => props.addTodo(input)} className='mark-complete-btn'>ADD</button>
       </div>

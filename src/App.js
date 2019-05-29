@@ -39,6 +39,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="todo-container">
+        <h1>TODO LIST</h1>
         { this.state.todos.length === 0 ? (
           <h2>You have no todos! Add one below</h2>
         ) : (
