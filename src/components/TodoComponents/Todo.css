@@ -1,0 +1,56 @@
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-title-incomplete {
+  color: darkblue;
+  flex-grow: 500;
+}
+
+.todo-title-complete {
+  color: darkslategray;
+  text-decoration: line-through;
+  font-style: italic;
+  flex-grow: 500;
+}
+
+.completed-text {
+  font-weight: bold;
+  font-style: italic;
+  color: gray;
+}
+
+.mark-complete-btn {
+  background: rgb(96, 150, 15);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background 0.1s;
+}
+
+.mark-complete-btn:hover {
+  background: greenyellow;
+}
+
+.todo-delete-btn {
+  display: flex;
+  flex-shrink: 500;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: color 0.1s;
+  transition: font-size 0.1s;
+}
+
+.todo-delete-btn:hover {
+  color: red;
+  font-size: 20px;
+}

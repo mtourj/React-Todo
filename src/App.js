@@ -1,13 +1,51 @@
 import React from 'react';
+import TodoList from './components/TodoComponents/TodoList';
+import TodoForm from './components/TodoComponents/TodoForm';
+
+import './App.css';
 
 class App extends React.Component {
-  // you will need a place to store your state in this component.
-  // design `App` to be the parent component of your application.
-  // this component is going to take care of state, and any change handlers you need to work with your state
+
+  state = {
+    todos: []
+  }  
+
+  idTracker = 0;
+
+  mark = target => {
+    let todos = Array.from(this.state.todos);
+    console.log(target);
+    const index = todos.indexOf(target);
+    todos[index].completed = true;
+    this.setState({todos: todos});
+  }
+
+  deleteTodo = target => {
+    let todos = Array.from(this.state.todos);
+    console.log(target);
+    const index = todos.indexOf(target);
+    todos.splice(index, 1);
+    this.setState({todos: todos});
+  }
+
+  addTodo = input => {
+    console.log(input);
+    let todos = Array.from(this.state.todos);
+    todos.push({ title: input.current.value, completed: false, id: this.idTracker});
+    this.idTracker++;
+    this.setState({todos: todos});
+  }
+
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <div className="todo-container">
+        { this.state.todos.length === 0 ? (
+          <h2>You have no todos! Add one below</h2>
+        ) : (
+        <TodoList delete={this.deleteTodo} mark={this.mark} todos={this.state.todos} />
+        )
+      }
+        <TodoForm addTodo={this.addTodo} />
       </div>
     );
   }
