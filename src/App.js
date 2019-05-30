@@ -27,12 +27,12 @@ class App extends React.Component {
     this.setState({todos: todos});
   }
 
-  addTodo = input => {
-    if(input.current.value === "")
+  addTodo = title => {
+    if(title === "")
       return;
-    console.log(input);
+    console.log(title);
     let todos = Array.from(this.state.todos);
-    todos.push({ title: input.current.value, completed: false, id: this.idTracker});
+    todos.push({ title: title, completed: false, id: this.idTracker});
     this.idTracker++;
     this.setState({todos: todos});
   }
