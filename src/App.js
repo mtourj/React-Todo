@@ -21,7 +21,6 @@ class App extends React.Component {
 
   deleteTodo = target => {
     let todos = Array.from(this.state.todos);
-    console.log(target);
     const index = todos.indexOf(target);
     todos.splice(index, 1);
     this.setState({todos: todos});
@@ -30,7 +29,6 @@ class App extends React.Component {
   addTodo = title => {
     if(title === "")
       return;
-    console.log(title);
     let todos = Array.from(this.state.todos);
     todos.push({ title: title, completed: false, id: this.idTracker});
     this.idTracker++;
