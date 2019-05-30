@@ -34,6 +34,7 @@
   width: 90%;
   height: 32px;
   margin: 5px;
+  margin-bottom: 12px;
   align-self: center;
   background: crimson;
   color: white;
@@ -46,4 +47,20 @@
 
 .clear-complete-btn:hover {
   background: red;
+}
+
+
+.add-btn {
+  background: rgb(96, 150, 15);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background 0.1s;
+}
+
+.add-btn:hover {
+  background: greenyellow;
 }

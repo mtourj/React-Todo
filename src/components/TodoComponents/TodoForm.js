@@ -9,7 +9,7 @@ const TodoForm = props => {
       <div className='field'>
         <p>CREATE TODO:</p>
         <input ref={input} />
-        <button onClick={() => props.addTodo(input)} className='mark-complete-btn'>ADD</button>
+        <button onClick={() => props.addTodo(input)} className='add-btn'>ADD</button>
       </div>
       <button onClick={props.removeCompleted} className="clear-complete-btn">CLEAR COMPLETED</button>
     </div>

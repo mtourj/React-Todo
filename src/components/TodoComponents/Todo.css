@@ -8,40 +8,35 @@
   border-radius: 8px;
   box-shadow: 0 0 3px 0 lightgray;
   margin: 2px 0;
+  cursor: pointer;
+
+  transition: background 0.5s;
 }
 
-.todo-title-incomplete {
+.todo:hover {
+  background: rgb(72, 207, 224);
+}
+
+.todo.complete {
+  background: rgb(182, 182, 182);
+
+  transition: background 0.5s;
+}
+
+.todo.complete:hover {
+  background: rgb(187, 187, 187);
+}
+
+.todo-title {
   color: white;
   flex-grow: 500;
 }
 
-.todo-title-complete {
+.todo-title.complete {
   color: darkslategray;
   text-decoration: line-through;
   font-style: italic;
   flex-grow: 500;
-}
-
-.completed-text {
-  font-weight: bold;
-  font-style: italic;
-  color: gray;
-  margin-right: 1.5rem;
-}
-
-.mark-complete-btn {
-  background: rgb(96, 150, 15);
-  border: none;
-  color: white;
-  font-weight: bold;
-  padding: 8px 12px;
-  cursor: pointer;
-  margin: 0 10px;
-  transition: background 0.1s;
-}
-
-.mark-complete-btn:hover {
-  background: greenyellow;
 }
 
 .todo-delete-btn {
@@ -60,4 +55,32 @@
 .todo-delete-btn:hover {
   color: red;
   font-size: 20px;
+}
+
+.toggle-complete-btn {
+  border-radius: 50%;
+  border: 4px solid greenyellow;
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 8px 12px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background 0.1s;
+  outline: none;
+  
+}
+
+.toggle-complete-btn:hover {
+  background: greenyellow;
+  box-shadow: 0 0 5px 0 gray;
+}
+
+.toggle-complete-btn.complete {
+  border: 1px solid rgb(75, 100, 26);
+  background: rgb(75, 100, 26);
+}
+
+.toggle-complete-btn.complete:hover {
+  background: lightcoral;
 }

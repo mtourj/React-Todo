@@ -12,11 +12,10 @@ class App extends React.Component {
 
   idTracker = 0;
 
-  mark = target => {
+  toggleComplete = target => {
     let todos = Array.from(this.state.todos);
-    console.log(target);
     const index = todos.indexOf(target);
-    todos[index].completed = true;
+    todos[index].completed = !todos[index].completed;
     this.setState({todos: todos});
   }
 
@@ -51,7 +50,7 @@ class App extends React.Component {
         { this.state.todos.length === 0 ? (
           <h2>You have no todos! Add one below</h2>
         ) : (
-        <TodoList delete={this.deleteTodo} mark={this.mark} todos={this.state.todos} />
+        <TodoList delete={this.deleteTodo} toggleComplete={this.toggleComplete} todos={this.state.todos} />
         )
       }
         <TodoForm removeCompleted={this.removeCompleted} addTodo={this.addTodo} />
