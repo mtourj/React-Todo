@@ -1,0 +1,12 @@
+.todo-container {
+  border: 1px solid darkgray;
+  margin: auto;
+  background: lavender;
+  width: 420px;
+  padding: 1rem;
+  box-shadow: 0 0 3px 0 gray;
+
+  border-radius: 10px;
+
+  font-family: 'Segoe UI', sans-serif;
+}

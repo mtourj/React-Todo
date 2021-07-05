@@ -1,0 +1,66 @@
+.todo-form {
+  margin: 10px 0;
+  border-top: 1px dashed gray;
+  border-bottom: 1px dashed gray;
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.field p {
+  height: 100%;
+  font-weight: bold;
+  font-style: italic;
+  color: darkslategray;
+}
+
+.field input {
+  height: 100%;
+  border-radius: 8px;
+  border: 1px solid gray;
+  padding: 0 7px;
+  margin: 0 9px;
+}
+
+.clear-complete-btn {
+  width: 90%;
+  height: 32px;
+  margin: 5px;
+  margin-bottom: 12px;
+  align-self: center;
+  background: crimson;
+  color: white;
+  border: 2px solid red;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 17px;
+  transition: background 0.1s;
+}
+
+.clear-complete-btn:hover {
+  background: red;
+}
+
+
+.add-btn {
+  background: rgb(96, 150, 15);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background 0.1s;
+}
+
+.add-btn:hover {
+  background: greenyellow;
+}
